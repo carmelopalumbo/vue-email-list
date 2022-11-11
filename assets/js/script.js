@@ -15,6 +15,7 @@ createApp({
 
     methods: {
         getApi(){
+            this.isLoad = false;
             this.mailList = [];
             if(this.count < 10){
                 axios.get(this.apiUrl)
