@@ -15,7 +15,6 @@ createApp({
 
     methods: {
         getApi(){
-            this.isLoad = false;
             this.mailList = [];
             if(this.count < 10){
                 axios.get(this.apiUrl)
@@ -26,10 +25,14 @@ createApp({
             }
             this.isLoad = true;
             this.count = 0;
+        },
+
+        checkLoading(){
+            return this.mailList.length === 10;
         }
     },
 
     mounted(){
-        //this.getApi();
+        this.getApi();
     }
 }).mount('#app')

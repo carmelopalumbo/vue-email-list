@@ -36,7 +36,7 @@
             <div class="col-6">
                 <div 
                 class="lds-spinner"
-                v-if="!isLoad"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                v-if="isLoad && !checkLoading()"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
             </div>
         </div>
         <div class="row my-5">
