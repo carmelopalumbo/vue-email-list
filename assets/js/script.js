@@ -21,7 +21,6 @@ createApp({
                 })
                 return this.getApi(++this.count)
             }
-            console.log(this.isLoad);
         }
     },
 
