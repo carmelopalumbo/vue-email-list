@@ -26,13 +26,24 @@
             <div class="col-12">
                 <h1 class="text-center fw-bold my-4 text-black">MAILING LIST</h1>
             </div>
-            <div class="col-6 offset-5">
-                <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+
+            <div class="col-1 offset-5">
+                <button type="button" 
+                class="btn btn-primary"
+                @click="getApi()">GENERA</button>
+            </div>
+
+            <div class="col-6">
+                <div 
+                class="lds-spinner"
+                v-if="!isLoad"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
             </div>
         </div>
         <div class="row my-5">
             <div class="col-6 m-auto text-center">
-                <ul class="list-group">
+                <ul 
+                class="list-group"
+                v-if="isLoad">
                     <li 
                     class="list-group-item"
                     v-for="mail in mailList">{{mail}}</li>
