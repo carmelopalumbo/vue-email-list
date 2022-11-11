@@ -18,8 +18,28 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>MAILING LIST</title>
 </head>
+
 <body>
     
+    <div class="container" id="app">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center fw-bold my-4 text-black">MAILING LIST</h1>
+            </div>
+            <div class="col-6 offset-5">
+                <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col-6 m-auto text-center">
+                <ul class="list-group">
+                    <li 
+                    class="list-group-item"
+                    v-for="mail in mailList">{{mail}}</li>
+                  </ul>
+            </div>
+        </div>
+    </div>
 
     <!-- SCRIPT JS -->
     <script src="assets/js/script.js"></script>
