@@ -16,7 +16,6 @@ createApp({
 
     methods: {
         getApi(){
-            this.isLoad = true;
             this.mailList = [];
             if(this.count < this.mailNum){
                 axios.get(this.apiUrl)
@@ -25,6 +24,7 @@ createApp({
                 })
                 return this.getApi(++this.count)
             }
+            this.isLoad = true;
             this.count = 0;
         },
 
